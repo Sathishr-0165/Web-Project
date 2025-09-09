@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Product Rating and Feedback</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 100px;
+        }
+        .stars span {
+            font-size: 40px;
+            cursor: pointer;
+            color: lightgray;
+            transition: color 0.3s;
+        }
+        .stars span.selected {
+            color: gold;
+        }
+        textarea {
+            width: 300px;
+            height: 80px;
+            margin-top: 10px;
+            padding: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Rate the Product</h2>
+
+<div class="stars" id="starRating">
+    <span data-value="1">★</span>
+    <span data-value="2">★</span>
+    <span data-value="3">★</span>
+    <span data-value="4">★</span>
+    <span data-value="5">★</span>
+</div>
+<p id="ratingText">Your rating: 0 stars</p>
+
+<h3>Write your Feedback</h3>
+<textarea id="feedbackText" placeholder="Write your feedback here..."></textarea><br>
+<button onclick="submitFeedback()">Submit your Feedback</button>
+
+<script>
+    let selectedRating = 0;
+    const stars = document.querySelectorAll("#starRating span");
+    const ratingText = document.getElementById("ratingText");
+
+    stars.forEach(star => {
+        star.addEventListener("click", () => {
+            selectedRating = star.getAttribute("data-value");
+            stars.forEach(s => s.classList.remove("selected"));
+            for (let i = 0; i < selectedRating; i++) {
+                stars[i].classList.add("selected");
+            }
+            ratingText.textContent = `Your rating: ${selectedRating} star${selectedRating > 1 ? 's' : ''}`;
+        });
+    });
+
+    function submitFeedback() {
+        const feedback = document.getElementById("feedbackText").value.trim();
+        if (selectedRating === 0) {
+            alert("Please select a rating!");
+            return;
+        }
+        if (feedback === "") {
+            alert("Please write your feedback!");
+            return;
+        }
+
+        alert("Feedback submitted successfully!");
+        window.location.href = "order.html";
+    }
+</script>
+
+</body>
+</html>

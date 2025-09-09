@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Method</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 100px;
+        }
+        .payment-option {
+            margin: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Select Payment Method</h2>
+
+    <div class="payment-option">
+        <input type="radio" id="online" name="payment" value="Online Payment">
+        <label for="online">Online Payment<h5>+91 9876543210</h5></label>
+        <input type="radio" id="cod" name="payment" value="Cash on Delivery">
+        <label for="cod">Cash on Delivery</label>
+    </div>
+
+    <button onclick="confirmPayment()">Confirm Payment</button>
+
+    <script>
+        function confirmPayment() {
+            const selected = document.querySelector('input[name="payment"]:checked');
+            if (!selected) {
+                alert("Please select a payment method!");
+                return;
+            }
+            alert("Payment selected: " + selected.value);
+            window.location.href = "review.html";
+        }
+    </script>
+
+</body>
+</html>

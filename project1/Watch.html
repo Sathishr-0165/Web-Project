@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Watch Collection - Fashion Store</title>
+    <style>
+        .collection {
+            display: none;
+            margin-top: 20px;
+        }
+        .item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+        .item img {
+            width: 200px;
+            height: 200px;
+        }
+        button {
+            padding: 10px ;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showCollection()">View Watch Collection</button>
+    <div class="collection" id="WatchCollection">
+        <h2>Watch Collection</h2>
+        <div class="item">
+            <img src="Watch1.jpg" alt="Watch">
+            <p>Watch - $25</p>
+            <button onclick="addToCart('Watch', 25)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Watch2.jpg" alt="Watch">
+            <p>Watch - $30</p>
+            <button onclick="addToCart('Watch', 30)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Watch3.jpg" alt="Watch">
+            <p>Watch - $28</p>
+            <button onclick="addToCart('Watch', 28)">Add to Cart</button>
+        </div>
+        <div class ="item">
+            <img src="Watch4.jpg" alt="Watch">
+            <p>Watch - $45</p>
+            <button onclick="addToCart('Watch', 45)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Watch5.jpg" alt="Watch">
+            <p>Watch - $48</p>
+            <button onclick="addToCart('Watch', 48)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Watch6.jpg" alt="Watch">
+            <p>Watch - $46</p>
+            <button onclick="addToCart('Watch', 43)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Watch7.jpg" alt="Watch">
+            <p>Watch - $46</p>
+            <button onclick="addToCart('Watch', 36)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Watch8.jpg" alt="Watch">
+            <p>Watch - $46</p>
+            <button onclick="addToCart('Watch', 30)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Watch9.jpg" alt="Watch">
+            <p>Watch - $46</p>
+            <button onclick="addToCart('Watch', 50)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Watch10.jpg" alt="Watch">
+            <p>Watch - $46</p>
+            <button onclick="addToCart('Watch', 47)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Watch11.jpg" alt="Watch">
+            <p>Watch - $46</p>
+            <button onclick="addToCart('Watch', 44)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Watch12.jpg" alt="Watch">
+            <p>Watch - $46</p>
+            <button onclick="addToCart('Watch', 40)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Watch13.jpg" alt="Watch">
+            <p>Watch - $46</p>
+            <button onclick="addToCart('Watch', 41)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Watch15.jpg" alt="Watch">
+            <p>Watch - $46</p>
+            <button onclick="addToCart('Watch', 30)">Add to Cart</button>
+        </div><hr>
+        <center><a href="Index.html">Previous Page</a><br>
+        <a href="Addtocart.html">Go to Cart</a></center>
+    </div>
+
+    <script>
+        function showCollection() {
+            document.getElementById("WatchCollection").style.display = "block";
+        }
+
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(name + ' added to cart!');
+        }
+    </script>
+</body>
+</html>

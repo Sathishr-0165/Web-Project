@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Page</title>
+  <style>
+    body {
+      background-image: url('images/bg-login.jpg');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input {
+      padding: 10px;
+      margin: 10px;
+    }
+    #error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<h1>Login</h1>
+  <input type="text" id="username" placeholder="Username(User123)" required><br>
+  <input type="password" id="password" placeholder="Password(Pass123)" required><br>
+  <button onclick="login()">Login</button>
+  <p id="error"></p>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      const correctUser = "User123";
+      const correctPass = "Pass123";
+
+      if (user === correctUser && pass === correctPass) {
+        window.location.href = "homepage.html"; 
+      } else {
+        document.getElementById("error").innerText = "Incorrect username or password!";
+      }
+    }
+  </script>
+</body>
+</html>

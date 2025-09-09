@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shoe Collection - Fashion Store</title>
+    <style>
+        .collection {
+            display: none;
+            margin-top: 20px;
+        }
+        .item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+        .item img {
+            width: 200px;
+            height: 200px;
+        }
+         button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showCollection()">View Shoes Collection</button>
+    <div class="collection" id="shoeCollection">
+        <h2>Shoes Collection</h2>
+        <div class="item">
+            <img src="Shoe 1.jpg" alt="Shoes">
+            <p>shoe - $25</p>
+            <div class="sizes">
+                <label>Size: </label>
+                <select id="size1">
+                    <option value="">Select</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                </select>
+            </div>
+            <button onclick="addToCart('Shoe', 25)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Shoe 2.jpg" alt="Shoes">
+            <p>shoe - $30</p>
+            <div class="sizes">
+                <label>Size: </label>
+                <select id="size2">
+                    <option value="">Select</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                </select>
+            </div>
+             <button onclick="addToCart('Shoe', 30)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Shoe 3.jpg" alt="Shoes">
+            <p>shoe - $28</p>
+            <div class="sizes">
+                <label>Size: </label>
+                <select id="size3">
+                    <option value="">Select</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                </select>
+            </div>
+             <button onclick="addToCart('Shoe', 28)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Shoe 4.jpg" alt="Shoes">
+            <p>shoe - $36</p>
+            <div class="sizes">
+                <label>Size: </label>
+                <select id="size4">
+                    <option value="">Select</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                </select>
+            </div>
+             <button onclick="addToCart('Shoe', 36)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Shoe 5.jpg" alt="Shoes">
+            <p>shoe - $48</p>
+            <div class="sizes">
+                <label>Size: </label>
+                <select id="size5">
+                    <option value="">Select</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                </select>
+            </div>
+             <button onclick="addToCart('Shoe', 48)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Shoe 6.jpg" alt="Shoes">
+            <p>shoe - $55</p>
+            <div class="sizes">
+                <label>Size: </label>
+                <select id="size6">
+                    <option value="">Select</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                </select>
+            </div>
+             <button onclick="addToCart('Shoe', 55)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Shoe 7.jpg" alt="Shoes">
+            <p>shoe - $48</p>
+            <div class="sizes">
+                <label>Size: </label>
+                <select id="size7">
+                    <option value="">Select</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                </select>
+            </div>
+             <button onclick="addToCart('Shoe', 35)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Shoe 8.jpg" alt="Shoes">
+            <p>shoe - $48</p>
+            <div class="sizes">
+                <label>Size: </label>
+                <select id="size8">
+                    <option value="">Select</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                </select>
+            </div>
+             <button onclick="addToCart('Shoe', 28)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Shoe 9.jpg" alt="Shoes">
+            <p>shoe - $48</p>
+            <div class="sizes">
+                <label>Size: </label>
+                <select id="size9">
+                    <option value="">Select</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                </select>
+            </div>
+             <button onclick="addToCart('Shoe', 38)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Shoe 10.jpg" alt="Shoes">
+            <p>shoe - $48</p>
+            <div class="sizes">
+                <label>Size: </label>
+                <select id="size10">
+                    <option value="">Select</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                </select>
+            </div>
+             <button onclick="addToCart('Shoe', 43)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Shoe 11.jpg" alt="Shoes">
+            <p>shoe - $48</p>
+            <div class="sizes">
+                <label>Size: </label>
+                <select id="size11">
+                    <option value="">Select</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                </select>
+            </div>
+             <button onclick="addToCart('Shoe', 49)">Add to Cart</button>
+        </div>
+        <div class="item">
+            <img src="Shoe 12.jpg" alt="Shoes">
+            <p>shoe - $48</p>
+            <div class="sizes">
+                <label>Size: </label>
+                <select id="size12">
+                    <option value="">Select</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                </select>
+            </div>
+             <button onclick="addToCart('Shoe', 48)">Add to Cart</button>
+        </div><hr>
+        <center><a href="homepage.html">Previous Page</a><br>
+        <a href="Addtocart.html">Go to Cart</a></center>
+    </div>
+     <script>
+        function showCollection() {
+            document.getElementById("shoeCollection").style.display = "block";
+        }
+
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(name + ' added to cart!');
+        }
+    </script>
+
+</body>
+</html>
